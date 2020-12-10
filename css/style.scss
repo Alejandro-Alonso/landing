@@ -1,0 +1,318 @@
+@import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+
+// colores
+$primary: #5BE0E7;
+$secondary: #012E30;
+$white: #fff;
+$text: #565656;
+
+hr {
+    border: 0;
+    border-bottom: 2px solid $primary;
+}
+
+.font-w {
+    &-extra-light {
+        font-weight: 200;
+    }
+
+    &-regular {
+        font-weight: 400;
+    }
+
+    &-semibold {
+        font-weight: 600;
+    }
+
+    &-bold {
+        font-weight: 800;
+    }
+}
+
+// Componentes
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt {
+    &-10 {
+        margin-top: 1rem;
+    }
+
+    &-20 {
+        margin-top: 2rem;
+    }
+
+    &-30 {
+        margin-top: 3rem;
+    }
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-gap {
+    margin-top: 6em;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.btn-primary {
+    padding: 1.3em 3em;
+    background: $secondary;
+    text-transform: uppercase;
+    color: $white;
+    display: inline-block;
+    @extend .font-w-bold;
+    letter-spacing: .5px;
+    border-radius: 5px;
+    transition: 400ms background ease-in-out;
+
+    &:hover {
+        background: darken($primary, 25%);
+    }
+}
+
+.title {
+    &-container {
+        h2 {
+            margin: 1rem 0 1.5rem;
+        }
+    }
+
+    &-head {
+        font-size: 3em;
+        @extend .font-w-bold;
+        color: $secondary;
+        text-transform: uppercase;
+
+        strong {
+            @extend .font-w-extra-light;
+        }
+    }
+
+    &-sub {
+        color: $primary;
+        @extend .font-w-bold;
+        font-size: 1.2em;
+    }
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    @extend .font-w-regular;
+    color: $text;
+}
+
+p {
+    line-height: 1.6;
+}
+
+header {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    .logo {
+        width: 5em;
+    }
+
+    ul {
+        li {
+            margin-right: 1em;
+        }
+    }
+}
+
+.home {
+    background: url('../img/banner.jpg');
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+
+    .wrapper {
+        max-width: 500px;
+
+        h1,
+        h2 {
+            color: $secondary;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h1 {
+            @extend .font-w-bold;
+            text-transform: uppercase;
+            font-size: 4.5em;
+            margin-top: 1rem;
+
+            span {
+                @extend .font-w-extra-light;
+            }
+        }
+
+        p {
+            margin-top: 1em;
+            color: $white;
+        }
+    }
+
+    .video {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1em;
+
+        img {
+            max-width: 500px;
+        }
+
+        p {
+            color: $secondary;
+        }
+    }
+}
+
+.main {
+    margin-top: 15em;
+
+    .services {
+        .wrap-text {
+            max-width: 700px;
+            @extend .margin-auto;
+            text-align: center;
+
+            hr {
+                margin-top: 2em;
+                width: 30%;
+                @extend .margin-auto;
+            }
+        }
+
+        ul {
+            margin-top: 2em;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2em;
+
+            li {
+                border-radius: 5px;
+                overflow: hidden;
+
+                .image {
+                    background: url('../img/mobiliario.jpg')center;
+                    background-size: cover;
+                    height: 400px;
+                }
+
+                .text {
+                    background: $white;
+                    padding: 1.2em;
+                    font-size: 1.4em;
+                    color: $secondary;
+                    @extend .font-w-bold;
+                    line-height: 1.2;
+                    justify-content: space-between;
+
+                    span {
+                        @extend .font-w-extra-light;
+                    }
+
+                    .icon {
+                        width: 2em;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-us {
+        grid-template-columns: 50% auto;
+        gap: 4em;
+        align-items: center;
+
+        .image {
+            background: url('../img/about-us.jpg')center;
+            background-size: cover;
+            height: 800px;
+        }
+
+        .text {
+            max-width: 650px;
+
+            .title-container {
+                hr {
+                    width: 20%;
+                }
+            }
+
+            ul {
+                li {
+                    @extend .mt-10;
+                    display: flex;
+                    align-items: center;
+
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        background: url('../img/svg/icon.svg')center;
+                        background-size: cover;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.history {
+    background: url('../img/trayectoria.jpg')center;
+    background-size: cover;
+    height: 600px;
+    @extend .flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .title-head-special {
+        @extend .font-w-extra-light;
+    }
+
+    hr {
+        border-color: $white;
+        width: 20%;
+        @extend .margin-auto;
+    }
+
+    p {
+        color: $secondary;
+    }
+}
+
+.bottom {
+    height: 600px;
+}
