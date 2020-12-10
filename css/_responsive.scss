@@ -1,0 +1,29 @@
+@mixin view-mobile {
+    @media screen and (max-width: $mobile_size) {
+        @content;
+    }
+}
+
+@mixin view-tablet {
+    @media screen and (min-width: $mobile_size) {
+        @content;
+    }
+}
+
+@mixin view-tablet-under {
+    @media screen and (max-width: $pc_size) {
+        @content;
+    }
+}
+
+@mixin view-pc {
+    @media screen and (min-width: $pc_size) {
+        @content;
+    }
+}
+
+@mixin view-hd {
+    @media screen and (min-width: $hd_size) {
+        @content;
+    }
+}

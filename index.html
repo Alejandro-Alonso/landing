@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Alkaidea | Todo para tu oficina</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.458 61.096">
                 <path id="Trazado_1" data-name="Trazado 1"
@@ -20,21 +21,22 @@
         <nav>
             <ul class="flex">
                 <li>
-                    <a href="">Inicio</a>
+                    <a class="anchor" href="#home">Inicio</a>
                 </li>
                 <li>
-                    <a href="">Proyectos</a>
+                    <a class="anchor" href="#projects">Proyectos</a>
                 </li>
                 <li>
-                    <a href="">Servicios</a>
+                    <a class="anchor" href="#services">Servicios</a>
                 </li>
                 <li>
-                    <a href="">Contactenos</a>
+                    <a class="anchor" href="#contact">Contactenos</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section class="home flex">
+    <div class="pattern"></div>
+    <section id="home" class="home flex">
         <div class="wrap">
             <div class="wrapper">
                 <h2>Nunc commodo cursus ex ac sodales.</h2>
@@ -51,7 +53,14 @@
             </div>
         </article>
     </section>
-    <main class="main">
+    <article class="video video-mobile wrap mt-40 flex">
+        <img src="./img/cool-office.png" alt="">
+        <div class="mt-10">
+            <p>Nunc commodo cursus ex ac sodales.</p>
+            <p class="font-w-bold">Pellentesque laoreet, lectus id sodales aliquet</p>
+        </div>
+    </article>
+    <main id="services" class="main">
         <div class="services wrap">
             <div class="wrap-text">
                 <div class="title-container">
@@ -149,7 +158,214 @@
             <a href="#" class="btn-primary mt-10">Contáctanos</a>
         </div>
     </section>
-    <div class="bottom"></div>
+    <div class="section-gap"></div>
+    <div class="wrap">
+        <section id="projects" class="projects">
+            <ul class="grid">
+                <li class="projects-inside">
+                    <div class="title-container">
+                        <h3 class="title-sub">Pellentesque laoreet, lectus id sodales aliquet</h3>
+                        <h2 class="title-head">Proyectos</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed ex ornare, congue dui ut, porta magna. In rhoncus mi purus, quis convallis ex vulputate at.</p>
+                    <hr class="mt-10">
+                </li>
+                <li class="span-2">
+                    <a class="text flex" href="#">
+                        <div class="title-container">
+                            <h3>mobiliario y sillas</h3>
+                            <h2>en marketeros agencia</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="projects-inside-2">
+                    <a class="text flex" href="#">
+                        <div class="title-container">
+                            <h3>mobiliario y sillas</h3>
+                            <h2>en marketeros agencia</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="projects-inside-3">
+                    <a class="text flex" href="#">
+                        <div class="title-container">
+                            <h3>mobiliario y sillas</h3>
+                            <h2>en marketeros agencia</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="projects-inside-4">
+                    <a class="text flex" href="#">
+                        <div class="title-container">
+                            <h3>mobiliario y sillas</h3>
+                            <h2>en marketeros agencia</h2>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="margin-auto">
+                <a class="btn-primary mt-30" href="">ver todos los proyectos</a>
+            </div>
+        </section>
+        <div class="section-gap"></div>
+        <section class="clients">
+            <div class="wrap-text">
+                <div class="title-container">
+                    <h3 class="title-sub">Pellentesque laoreet, lectus id sodales aliquet</h3>
+                    <h2 class="title-head"><strong>nuestros</strong> clientes</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed ex ornare, congue dui ut, porta magna. In rhoncus mi purus, quis convallis ex vulputate at.</p>
+                <hr>
+            </div>
+            <div class="swiper-container mt-40">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="./img/logos/amazon-logo.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/open-english.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/industria.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/omp.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/externado.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/siemens.jpg" alt="logos">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/logos/amazon-logo.jpg" alt="logos">
+                    </li>
+                </ul>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </div>
+    <footer id="contact" class="flex">
+        <div class="container wrap">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.458 61.096">
+                <path id="Trazado_1" data-name="Trazado 1"
+                    d="M-678.542,134.064l-.143-2.15c-.611-9.161-3.733-16.961-9.281-23.182a38.971,38.971,0,0,0-6.05-5.472,40.5,40.5,0,0,0,7.794-8.144,37.149,37.149,0,0,0,4.975-9.694,30.976,30.976,0,0,0,1.8-10.488l-.094-1.913-35.273-.054V94.251a71.4,71.4,0,0,0-15.188-1.843L-732,92.43v41.586h21.212V120.127a18.053,18.053,0,0,1,4.72,3.941,14.171,14.171,0,0,1,3.391,7.993l-.021,2Zm-4.362-4.031h-5.817a31.948,31.948,0,0,0-8.178-16.814,34.537,34.537,0,0,0-13.888-8.654V99.5c1.278.4,2.574.842,3.87,1.345C-692.582,106.42-684.513,116.231-682.9,130.033Zm-16.7-53.011,6.184.009c-.817,4.013-3.846,13.075-14.884,19.033q-1.253-.418-2.483-.774V90.715a18.323,18.323,0,0,0,9.581-9.016A20.352,20.352,0,0,0-699.6,77.023Zm2.033,23.886a51.182,51.182,0,0,0-5.933-3.017,34.518,34.518,0,0,0,6.337-5.32,31.529,31.529,0,0,0,5.494-8.129,29.225,29.225,0,0,0,2.35-7.4l5.77.009C-683.93,81.4-686.053,92.347-697.571,100.909Zm-6.175-23.892a16.31,16.31,0,0,1-1.151,3.052,14.059,14.059,0,0,1-5.89,6.183V77.005ZM-714.819,98.4v4.967a54.523,54.523,0,0,0-13.15-1.572V96.5A73.485,73.485,0,0,1-714.819,98.4Zm0,31.586h-13.15V115.914a42.376,42.376,0,0,1,13.15,2.317Zm-13.15-18.106v-6.047a50.865,50.865,0,0,1,13.15,1.7v6.418A48.376,48.376,0,0,0-727.969,111.88Zm25.191,9.842a22.952,22.952,0,0,0-8.01-6.174v-6.689c9.915,3.854,15.948,10.965,17.966,21.174h-6.054A18.829,18.829,0,0,0-702.778,121.722Z"
+                    transform="translate(732 -72.968)" fill="#fff" />
+            </svg>
+            <p class="mt-10 wrap-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed ex ornare, congue dui ut, porta magna. In rhoncus mi purus, quis convallis ex vulputate at.</p>
+            <ul class="grid mt-20">
+                <li>
+                    <a class="flex" href="#">
+                        <div class="icon">
+                            <img src="./img/svg/icon-llamanos.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>llámanos</h3>
+                            <h4>+57 310 222 5878</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex" href="#">
+                        <div class="icon">
+                            <img src="./img/svg/icon-escribenos.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Escríbenos</h3>
+                            <h4>hola@alkaidea.com</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="flex">
+                    <div class="icon">
+                        <img src="./img/svg/icon-visitanos.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Visitanos</h3>
+                        <h4>Calle 98A # 51 - 78</h4>
+                    </div>
+                </li>
+            </ul>
+            <p class="mt-20">Alkaidea 2019 | Todos los derechos reservados | Diseño Web Bogotá por Marketeros Agencia</p>
+        </div>
+    </footer>
+    <ul class="social-media">
+        <li>
+            <a href="#">
+                <img class="facebook" src="./img/svg/facebook.svg" alt="Facebook">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/svg/twitter.svg" alt="Twitter">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/svg/linkedin.svg" alt="Linkedin">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/svg/instagram.svg" alt="Instagram">
+            </a>
+        </li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 30
+                },
+
+            }
+        });
+        $(document).ready(function () {
+            $('.anchor').click(function (e) {
+                e.preventDefault();
+                var target = $($(this).attr('href'));
+                if (target.length) {
+                    var scrollTo = target.offset().top - 150;
+                    $('body, html').animate({
+                        scrollTop: scrollTo + 'px'
+                    }, 1000);
+                }
+            });
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 200) {
+                    $("#header").addClass("top-sticky");
+                } else {
+                    $("#header").removeClass("top-sticky");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
